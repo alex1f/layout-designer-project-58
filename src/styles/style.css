@@ -1,7 +1,49 @@
 /** CSS STYLE **/
-
 .hello {
   display: block;
 
   color: #fff;
+}
+
+@font-face {
+  font-weight: 400; /* Соответствует значению normal */
+  font-family: "Open Sans";
+  src: url("../../assets/fonts/OpenSans-VariableFont_wdth,wght.ttf");
+}
+
+@font-face {
+  font-weight: 400; /* Соответствует значению normal */
+  font-family: Neucha;
+  src: url("../../assets/fonts/Neucha-Regular.ttf");
+}
+
+
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6em;
+  color: #2A2626;
+}
+
+h1, h2, h3 {
+  font-family: Neucha, serif;
+  line-height: 1.2em;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+h3 {
+  font-size: 34px;
+}
+
+.element {
+  max-width: 1110px;
+  padding: 100px 0;
 }
