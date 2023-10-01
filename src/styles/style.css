@@ -57,6 +57,12 @@ h3 {
   color: var(--no_accent-color);
 }
 
+.with_accent {
+  color: var(--accent-color);
+}
+
+/* End global settings */
+
 /* Start header settings */
 
 header {
@@ -80,7 +86,6 @@ header::before {
 
 .intro h1 {
   max-width: 100%;
-  color: var(--accent-color);
 }
 
 .intro {
@@ -121,6 +126,7 @@ header::before {
 .element {
   max-width: 1110px;
   padding: 100px 0;
+  border: red solid 5px;
 } 
 
 .element p {
@@ -142,3 +148,26 @@ header::before {
 }
 
 /* End core card settings */
+
+/* Start settings for card with video */
+.with_video {
+  padding: 0;
+  text-align: center;
+}
+
+.with_video h2{
+  margin-bottom: 30px;
+}
+
+.with_video p{
+  margin-bottom: 30px;
+}
+
+.video {
+  position: relative;
+  bottom: -100px;
+  margin: 0 auto;
+  filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
+}
+
+/* End settings for card with video */
