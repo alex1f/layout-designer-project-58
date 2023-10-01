@@ -17,17 +17,22 @@
   src: url("../../assets/fonts/Neucha-Regular.ttf");
 }
 
+
+/* Global variables */
 :root {
   --accent-color: #FE8A02;
+  --no_accent-color: #2A2626;
+  --background-color-light: #F5F4F0;
 }
 
 
+/* Global settings */
 
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.6em;
-  color: #2A2626;
+  color: var(--no_accent-color);
 }
 
 h1, h2, h3 {
@@ -48,47 +53,39 @@ h3 {
   font-size: 34px;
 }
 
+.no_accent {
+  color: var(--no_accent-color);
+}
+
+/* Start header settings */
+
 header {
   position: relative;
 }
 
 header::before {
-  content: "";
-  opacity: 0.1;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../../assets/images/background.png");
   position: absolute;
   width: 100%; 
   height: 100%; 
-  content: "";
   top: 0;
-}
 
-.element {
-  max-width: 1110px;
-  padding: 100px 0;
-} 
+  background-image: url("../../assets/images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 
-.element p {
-   margin-top: 0;
+  opacity: 0.1;
 
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
+  content: "";
 }
 
 .intro h1 {
-  color: var(--accent-color);
   max-width: 100%;
-}
-
-.no_accent {
-  color: #2A2626;
+  color: var(--accent-color);
 }
 
 .intro {
   position: relative;
-  background-color: #F5F4F0;
+  background-color: var(--background-color-light);
 }
 
 .intro img {
@@ -102,6 +99,37 @@ header::before {
   overflow: hidden;
 }
 
+.link {
+  margin-top: 40px;
+  padding: 12px 24px;
+
+  display: inline-block;
+
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: white;
+  background-color: var(--accent-color);
+}
+
+/* End header settings */
+
+
+
+/* Start core card settings */
+.element {
+  max-width: 1110px;
+  padding: 100px 0;
+} 
+
+.element p {
+  margin-top: 0;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
 .container {
   display: flex;
   justify-content: flex-start;
@@ -113,13 +141,4 @@ header::before {
   flex-grow: 1;
 }
 
-.link {
-  display: inline-block;
-  margin-top: 40px;
-  padding: 12px 24px;
-  font-weight: bold;
-  background-color: var(--accent-color);
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-}
+/* End core card settings */
